@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Card Validation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+ 
+  </header>
+  <main>
+    <section id="inicio" name="inicio" class="inicio">
+      <video src="galeria/vive experiencia.mp4" autoplay loop>
+      </video>
+      <p>
+        <label for="numeroTarjeta">Numero de Tarjeta:</label>
+        <input id="numeroTarjeta" class="submit" name="numeroTarjeta" type="number" pattern="[0-9]{16}"/>
+        <button id="validar" class="validar" name="validar"> Validar </button>
+      </p>
+    </section>
+    <section id="contenedor" class="contenedor">
+
+      <section id="contenedorTarjeta" class="contenedorTarjeta">
+        <h2>VIVE TU EXPERIENCIA</h2>
+
+        <section class="tarjeta" id="tarjeta">
+          <article class="delantera">
+            <article class="logoMarca" id="logoMarca">
+              <img src="galeria/visa.png" alt="">
+            </article>
+            <img src="galeria/chip-tarjeta.png" class="chip" alt="">
+            <article class="datos">
+              <article class="grupo" id="maskify">
+                <p class="label">Numero Tarjeta</p>
+              </article>
+              <article class="flexbox">
+                <article class="grupo">
+                  <p class="label"></p>
+                  <p class="nombre" id="nombre" name="nombre">Nombre</p>
+                </article>
+                <article class="grupo" id="expiracion">
+                  <p class="label"></p>
+                  <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                </article>
+              </article>
+            </article>
+          </article>
+
+          <article class="trasera">
+            <article class="barraMagnetica"></article>
+            <article class="grupo" id="monto">
+              <p class="label"></p>
+              <p class="monto"></p>
+            </article>
+            <article class="datos">
+              <article class="grupo" id="ccv">
+                <p class="label">CCV</p>
+                <p class="ccv"></p>
+              </article>
+              <p class="leyenda">"ATREVETE A CRUZAR FRONTERAS"</p>
+            </article>
+          </article>
+
+        </section>
+        <form action="" id="formulario" class="formulario active">
+          <article class="grupo">
+            <label for="inputNombre">Nombre</label>
+            <input type="text" id="inputNombre">
+          </article>
+
+          <section class="flexbox">
+            <article class="grupoExpiracion">
+              <label for="selectMes">Expiracion</label>
+
+              <article class="flexbox">
+                <article class="grupoSelect">
+                  <select name="mes" id="selectMes">
+                    <option disabled selected>Mes</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </article>
+
+                <article class="grupoSelect">
+                  <select name="year" id="selectYear">
+                    <option disabled selected>Año</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </article>
+
+            </article>
+
+            <article class="grupoccv">
+              <label for="inputccv">ccv</label>
+              <input type="text" id="inputccv" maxlength="3">
+            </article>
+
+            <article class="grupoSelect">
+              <label for="selectMonto">Selecciona un Monto</label>
+              <select name="monto" id="selectMonto">
+                <option selected>$ 1.000.000</option>
+                <option selected>$ 3.000.000</option>
+                <option selected>$ 5.000.000</option>
+                <option selected>$ 8.000.000</option>
+                <option selected>$ 10.000.000</option>
+              </select>
+              <i class="fas fa-angle-down"></i>
+            </article>
+
+           
+          </section>
+          <button type="submit" class="botonCargar">Cargar</button>
+
+        </form>
+      </section>
+
+
+    </section>
+    <aside></aside>
+  </main>
+  <footer></footer>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
