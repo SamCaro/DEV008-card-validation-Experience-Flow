@@ -1,16 +1,21 @@
 import validator from './validator.js';
 
+function mostrarContenedor() {
+  document.getElementById("contenedor").style.display = 'block';
+}
+document.querySelector('#seleccionar').onclick = function () {
+  mostrarContenedor();
+}
+
 const botonValidar = document.querySelector('#validar');
 
 botonValidar.addEventListener('click', function (event) {
   //dejar de ejecutar el evento. bloquea el click, de lo contrario envia los datos y cambia la url
   event.preventDefault();
 
-  document.getElementById("contenedor").style.display = 'block';
-
   //accedo al numero 
-  const numero = document.getElementById('numeroTarjeta').value  
-    .replace(/[^0-9]/g,'')
+  const numero = document.getElementById('numeroTarjeta').value
+    .replace(/[^0-9]/g, '')
     //expresion regular Elimina espacios en blanco, busca y reemplaza por '' osea nada
     .replace(/\s/g, '')
     //Elimina las letras 
@@ -18,7 +23,7 @@ botonValidar.addEventListener('click', function (event) {
     //elimina el ultimo espacio
     .trim();
 
-  document.getElementById('inicio').innerHTML = validator.isValid(numero);
+  document.getElementById('validacion').innerHTML = validator.isValid(numero);
   document.getElementById('maskify').innerHTML = validator.maskify(numero);
 });
 
@@ -53,7 +58,7 @@ for (let i = yearActual; i <= yearActual + 8; i++) {
 //let nombreTarjeta = document.getElementById("nombre").textContent;
 //tambien se puede expresar funcion tipo flecha 
 inputNombre.addEventListener('keyup', (e) => {
-  const valorInput = e.target.value; 
+  const valorInput = e.target.value;
   //esta validacion me reemplaza los numeros que encuentra por nada 
   inputNombre.value = valorInput.replace(/[0-9]/g, '');
   //const que me permite acceder a al nombre de la tarjeta 
@@ -81,7 +86,7 @@ inputccv.addEventListener('keyup', (e) => {
   const ccv = document.querySelector('#tarjeta .ccv');
   // funcion para que se ejecute () =>
   inputccv.value = inputccv.value
-  // Elimina espacios
+    // Elimina espacios
     .replace(/\s/g, '')
     //Elimina letras 
     .replace(/\D/g, '');
@@ -89,10 +94,13 @@ inputccv.addEventListener('keyup', (e) => {
 });
 
 //mostrar monto 
-selectMonto.addEventListener('change', (e) => {
-  const monto = document.querySelector('#tarjeta .monto');
-  monto.textContent = e.target.value;
+selectMonto.addEventListener('change', function (event) {
+ const monto = document.querySelector('#tarjeta .monto');
+  monto.textContent = event.target.value;
 });
+
+
+
 
 
 
