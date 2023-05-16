@@ -12,50 +12,37 @@ video {
     z-index: -1;
 }
 
-h2{
-    color: rgb(24, 17, 5);
-    font-family: 'M PLUS 1 Code', sans-serif;
-    text-align: center;
-    width: 100%;
+h1{
+    color: rgb(241, 240, 236);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;   
 }
 
 .inicio {
-    border-radius: 15px;
-    font-family: 'M PLUS 1 Code', sans-serif;
-    font-size: 16px;   
-    padding: 20px;
-    margin: 0 auto;
-    width: 300px;   
+    text-align: center;
+    margin-top: 550px;
+    font-size: 30px;
 } 
 
-.submit{
-    padding: 9px;
-    border-radius: 15px;
-    color: #1a1003;
-    font-size: 16px;
-    width: 100%;
+.selectMonto {
+    border-radius: 25px;
+    font-size: 28px;
+    color: black;   
+    box-shadow: 0 10px 10px 0 rgba(240, 183, 118, 0.3);
+    background: rgb(206, 192, 160);
+    padding: 20px;
 }
-    
-.submit:focus{
-    border-color: white;
-    border-radius: 15px;
-}
-    
-.validar{
-    border: solid 1px #8d8b8b;
+
+.seleccionar {
+    border: solid 1px white;
     width: 100px;
-    border-radius: 15px;
-    padding: 9px;
+    border-radius: 25px;
+    padding: 25px;
     color: #4f4f4f;
-    font-size: 16px;
-    margin-top: 20px;
+    box-shadow: 0 10px 10px 0 rgba(240, 183, 118, 0.3);
+    background: rgb(206, 192, 160);
+    font-size: 12px;
 }
-    
-.validar:focus{
-    border-color: white;
-    border-radius: 15px;
-}
-    
 
 .contenedor {
     display: none;
@@ -64,13 +51,10 @@ h2{
 .contenedorTarjeta {
     /*ancho*/
     width: 100%;
-    max-width: 1000px;    
-    padding: 40px 20px;
-    margin: auto;
     display: flex;
     flex-direction: column;
      /* fondo*/
-     background-image: url(galeria/terra.png);
+    background-image: url(galeria/terra.png);
     align-items: center;   
     font-family: 'M PLUS 1 Code', sans-serif;   
 }
@@ -78,26 +62,21 @@ h2{
 .tarjeta {
     width: 100%;
     max-width: 550px;
-    color: white;
-    z-index: 2;
+    color: black;
 }
 
 .tarjeta > article {
     padding: 30px;
     border-radius: 15px;
     min-height: 315px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 10px 10px 0 rgba(102, 142, 190, 0.3);
+    box-shadow: 0 10px 10px 0 rgba(240, 183, 118, 0.3);
 }
 
 .tarjeta .delantera{
     width: 100%;
     background-image: url(galeria/card.png);
     background-size: cover;
-    border-radius: 15px;
-    
+    border-radius: 15px;   
 }
 
 .delantera .logoMarca{
@@ -109,19 +88,17 @@ h2{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-width: 80px;
+    max-width: 100px;
 }
 
 .delantera .chip {
     width: 100%;
-    max-width: 50px;
-    margin-bottom: 20px;
+    max-width: 70px;
+    margin-bottom: 20px;  
 }
 
-.delantera .grupo .numero,
-.delantera .grupo .nombre,
-.delantera .grupo .expiracion {
-    color: white;
+.delantera .grupo {
+    color: black;
     font-size: 22px;
     /* uppercase mayuscula*/
     text-transform: uppercase;
@@ -132,7 +109,6 @@ h2{
     justify-content: space-between;
     margin-top: 20px;
 }
-
 
 /*********Back Card************/
 
@@ -161,12 +137,13 @@ h2{
 }
 
 .trasera .datos #ccv .ccv {
-    background: white;
+    background: rgb(206, 192, 160);
     height: 40px;
     color: black;
-    padding: 10px;
+    padding: 1px;
     text-align: center;
     font-size: 20px;
+    border-radius: 15px;
 }
 
 .trasera .leyenda {
@@ -174,29 +151,49 @@ h2{
     line-height: 24px;
 }
 
-
 /* Formilario */
 .formulario label {
     display: block;
     color: #0c1b29;
     margin-bottom: 5px;
     font-size: 20px;
+    box-shadow: 0 10px 10px 0 rgba(240, 183, 118, 0.3);
+}
+ 
+.validar{
+    border: solid 1px #70f502;
+    width: 100px;
+    border-radius: 25px;
+    padding: 9px;
+    color: #4f4f4f;
+    font-size: 15px;
+    margin-top: 20px;
+    box-shadow: 0 10px 10px 0 rgb(177, 253, 0);
+    background: rgb(206, 192, 160);
+}
+    
+.validar:focus{
+    border-color: white;
+    border-radius: 15px;
 }
 
 .formulario input,
 .formulario select,
 .botonCargar {
-    border: solid 1px #8d8b8b;
+    border: solid 1px white;
     font-size: 18px;
     height: 50px;
     width: 250px;
-    border-radius: 15px;   
-    color: #121212;   
+    border-radius: 25px;   
+    color: black;   
+    box-shadow: 0 10px 10px 0 rgba(240, 183, 118, 0.3);
+    background: rgb(206, 192, 160);
 }
 
 .formulario input {
     margin-bottom: 20px;
     text-transform: uppercase;
+    box-shadow: 0 10px 10px 0 rgba(240, 183, 118, 0.3);
 }
 
 .formulario .flexbox {
@@ -204,28 +201,13 @@ h2{
     justify-content: space-between;
 }
 
-.formulario .expiracion {
-    width: 100%;
-}
-
-.formulario .ccv {
-    min-width: 100%;
-}
-
-
-.formulario .monto {
-    width: 100%;
-    position: relative;
-}
-
 .botonCargar {
-    border: solid 1px #8d8b8b;
+    border: solid 1px #70f502;
     width: 100px;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 9px;
     color: #4f4f4f;
     font-size: 16px;
     margin-top: 20px;
+    box-shadow: 0 10px 10px 0 #4f4f4f;
 }
-
-
