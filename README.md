@@ -18,7 +18,7 @@ celulares, tarjetas de crédito, etc.
 
  ## 1. Demo
 
-http://127.0.0.1:5500/index.html?monto=%24+10.000.000
+http://127.0.0.1:5500/src/index.html
 
 ## 2. Caracteristicas
 
